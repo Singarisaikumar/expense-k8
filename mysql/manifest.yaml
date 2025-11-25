@@ -2,6 +2,7 @@ kind: Deployment
 apiVersion: apps/v1
 metadata:
   name: nginx
+  Namespace: expense
   labels:
     component: mysql
     project: expense
