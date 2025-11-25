@@ -7,7 +7,7 @@ metadata:
 #   DB_HOST: mysql
 ---
 kind: Deployment
-apiVersion: webs/v1
+apiVersion: apps/v1
 metadata:
   name: frontend
   namespace: expense
