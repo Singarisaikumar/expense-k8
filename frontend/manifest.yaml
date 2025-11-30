@@ -119,6 +119,13 @@ spec:
       containers:
       - name: frontend
         image: saikumar718/frontend:v1.0
+        resources:
+           requests:
+              cpu: "100m"
+              memory: "125mi"
+           limits:
+              cpu: "150mi"
+              memory: "250mi"
         volumeMounts:
             - name: nginx-conf
               mountPath: /etc/nginx/nginx.conf
