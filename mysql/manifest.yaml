@@ -23,9 +23,19 @@ spec:
         project: expense
         tier: db
     spec:
-      containers:
+      containers: 
       - name: mysql
         image: saikumar718/mysql:v1.0
+        readinessProbe:
+          tcpSocket:
+            port: 3306
+          initialDelaySeconds: 10
+          periodSeconds: 5
+        livenessProbe:
+          tcpSocket:
+            port: 3306
+          initialDelaySeconds: 10
+          periodSeconds: 5 
 
 ---
 apiVersion: v1 
