@@ -52,6 +52,13 @@ spec:
           failureThreshold: 2
           initialDelaySeconds: 30
           periodSeconds: 5
+        readinessProbe:
+          httpGet:
+            path: /health
+            port: 8080
+          failureThreshold: 2
+          initialDelaySeconds: 30
+          periodSeconds: 5
         envFrom:
         - configMapRef:
            name: backend
